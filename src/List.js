@@ -5,6 +5,10 @@ class List extends Component {
   handleSortChange = () => {
     this.props.handleSortChange()
   }
+
+  handleSearchChange = ({target}) => {
+    this.props.handleSearchChange(target)
+  }
   render() {
     const { list, title } = this.props;
     if (!list) {
