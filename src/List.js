@@ -2,21 +2,28 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom'
 
 class List extends Component {
+  handleSortChange = () => {
+    this.props.handleSortChange()
+  }
   render() {
     const { list, title } = this.props;
-    console.log(list);
     if (!list) {
-      console.log("here");
       return <h1>Loading...</h1>;
     } else {
       return (
-        <ul>
-          {list.map(element => (
-            <li key={element.url}>
-              <Link to={{pathname: "/entity", state: {url: element.url}}}>{element[title]}</Link>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <input type='checkbox' id='sort' onChange={this.handleSortChange}></input>
+          <label htmlFor='sort'>Sort</label>
+          <input type='text' id='search' onChange={this.handleSearchChange}></input>
+          <label htmlFor='search'>Search</label>
+          <ul>
+            {list.map(element => (
+              <li key={element.url}>
+                <Link to={{pathname: "/entity", state: {url: element.url}}}>{element[title]}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       );
     }
   }
