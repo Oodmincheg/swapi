@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { PEOPLE_URL } from "./urls";
-import ListContainer from "./ListContainer";
+import ListContainer from "./components/ListContainer.js";
 
 class People extends Component {
   render() {

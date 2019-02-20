@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Pagination from "./Pagination";
-import List from "./List";
+import Pagination from "../Pagination.js";
+import List from "./List.js";
 
 export default class ListContainer extends Component {
   state = { isSorted: false, searchString: "" };

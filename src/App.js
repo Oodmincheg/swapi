@@ -7,7 +7,7 @@ import Planets from "./Planets";
 import "./App.css";
 import Starships from "./Starships";
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
-import ContainerEntityCard from "./ContainerCard";
+import ContainerEntityCard from "./components/ContainerCard.js";
 import './App.css'
 
 class App extends Component {

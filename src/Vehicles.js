@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {VEHICLES_URL} from './urls'
-import ListContainer from './ListContainer'
+import ListContainer from './components/ListContainer'
 
  class Vehicles extends Component {
      

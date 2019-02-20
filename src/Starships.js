@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { STARSHIPS_URL } from "./urls";
-import ListContainer from "./ListContainer";
+import ListContainer from "./components/ListContainer";
 
 class Starships extends Component {
   render() {
