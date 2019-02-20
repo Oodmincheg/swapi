@@ -14,7 +14,6 @@ class ContainerEntityCard extends Component {
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.location.state.url !== this.props.location.state.url) {
-      debugger;
       this.fetchFromUrlAndSetState(nextProps.location.state.url);
     }
   }

@@ -8,6 +8,7 @@ import "./App.css";
 import Starships from "./Starships";
 import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
 import ContainerEntityCard from "./ContainerCard";
+import './App.css'
 
 class App extends Component {
   render() {
@@ -23,7 +24,7 @@ class App extends Component {
             <Link to="/species">species</Link>
           </div>
           <div className="tabs">
-            <Switch>
+            <Switch className="tabs">
               <Route exact path="/films" component={Films} />
               <Route exact path="/planets" component={Planets} />
               <Route exact path="/people" component={People} />

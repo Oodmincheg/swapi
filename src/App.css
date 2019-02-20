@@ -1,0 +1,35 @@
+.links {
+    text-align: center;
+    margin: 50px auto auto auto
+}
+.links a {
+    margin: 20px;
+}
+
+.tabs {
+    text-align: center
+}
+
+.entityList {
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    border: 1px solid black;
+    width: 50%;
+    
+    
+}
+
+.entityList a {
+    display: block;
+    margin: 5px;
+}
+
+.pagination-next {
+    margin: 5px;
+    text-decoration: underline;
+}
+
+.pagination-next:hover {
+    color: red;
+    cursor: pointer;
+}

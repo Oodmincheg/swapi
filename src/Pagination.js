@@ -10,10 +10,10 @@ class Pagination extends Component {
   render() {
       const {currentPage, nextPage, prevPage} = this.props
     return (
-      <div>
-        {prevPage ? <span onClick={this.handlePrev}>previous</span> : ''}
+      <div className="pagination">
+        {prevPage ? <span onClick={this.handlePrev} className="pagination-next">previous</span> : ''}
         <span>{currentPage}</span>
-        {nextPage ? <span onClick={this.handleNext}>next</span> : ''}
+        {nextPage ? <span onClick={this.handleNext} className="pagination-next">next</span> : ''}
       </div>
     )
   }

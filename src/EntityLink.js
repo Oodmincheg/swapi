@@ -2,14 +2,19 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class EntityLink extends Component {
+  state = { entityObject: {} };
   async componentDidMount() {
-    const { url } = this.props.location.state;
+    const { url } = this.props;
     let data = await fetch(url);
     let entityObject = await data.json();
-    this.setState(entityObject);
+    this.setState({ entityObject });
   }
   render() {
-    return <Link to={{pathname:'/entity'}}></Link>;
+    const { url } = this.props;
+    const { name, title } = this.state.entityObject;
+    return (
+      <Link to={{ pathname: "/entity", state: { url: url } }}>{name || title}</Link>
+    );
   }
 }
 

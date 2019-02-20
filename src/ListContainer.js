@@ -40,7 +40,7 @@ export default class ListContainer extends Component {
             .sort(this.compare)
             
         : results;
-    listToRender = results && listToRender.filter(entity => entity[title].includes(searchString))
+    listToRender = results && listToRender.filter(entity => entity[title].toUpperCase().includes(searchString.toUpperCase()))
     console.log("results", results);
     return (
       <div>
